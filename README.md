@@ -2,6 +2,8 @@
 
 A stunning, interactive glassmorphic (frosted glass) bubble widget for Flutter. It features dynamic radial gradients, auto-scaling sizes based on percentage values, and smooth animations when interacted with.
 
+![Glassy Bubble preview](https://raw.githubusercontent.com/dyuta6/glassy_bubble/main/example/assets/demo.png)
+
 ## Features
 
 * ✨ **Glassmorphism:** Elegant blur and frosted glass overlays using `ImageFilter`.
@@ -19,11 +21,11 @@ Add this to your `pubspec.yaml`:
 dependencies:
   glassy_bubble:
     git:
-      url: https://github.com/dyuta/glassy_bubble.git
+      url: https://github.com/dyuta6/glassy_bubble.git
       ref: main
 ```
 
-*(Note: Once published to pub.dev, you can use `glassy_bubble: ^0.0.1`)*
+    After publishing, use `glassy_bubble: ^0.0.3` from pub.dev.
 
 ---
 
