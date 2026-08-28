@@ -5,7 +5,7 @@ extension on num {
   double get rem => this * 16.0;
 }
 
-/// Tek kelime: ilk harf büyük, kalanı küçük (baloncuk etiketi).
+/// Helper method to capitalize only the first word in a raw string.
 String _bubbleSingleCapitalizedWord(String raw) {
   final trimmed = raw.trim();
   if (trimmed.isEmpty) return trimmed;
@@ -14,16 +14,38 @@ String _bubbleSingleCapitalizedWord(String raw) {
   return firstWord[0].toUpperCase() + firstWord.substring(1).toLowerCase();
 }
 
+/// A custom interactive widget with glassmorphism (frosted glass) radial gradient circles.
+///
+/// By default, it displays a percentage value (e.g. `%85`).
+/// When long-pressed, it scales up smoothly and swaps to display the capitalized [description].
 class GlassyBubble extends StatefulWidget {
+  /// The percentage value to display inside the bubble (e.g., `'85'`).
   final String percentage;
+
+  /// The description text shown when the bubble is long-pressed (e.g., `'UI Design'`).
   final String description;
+
+  /// The base size multiplier. The actual radius will be scaled with `rem` and auto-adjusted
+  /// depending on the [percentage] value.
   final double radius;
+
+  /// The custom font family to use for texts. Defaults to `'Anaktoria'`.
   final String? fontFamily;
+
+  /// The custom [TextStyle] for the '%' percentage sign.
   final TextStyle? percentageStyle;
+
+  /// The custom [TextStyle] for the percentage number.
   final TextStyle? valueStyle;
+
+  /// The custom [TextStyle] for the description text shown on long-press.
   final TextStyle? descriptionStyle;
+
+  /// Custom list of colors for the radial gradient background.
+  /// Must contain exactly 5 colors to match the stops sequence.
   final List<Color>? gradientColors;
 
+  /// Creates a new [GlassyBubble].
   const GlassyBubble({
     super.key,
     required this.percentage,
