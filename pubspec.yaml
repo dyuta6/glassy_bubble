@@ -1,6 +1,6 @@
 name: glassy_bubble
 description: A stunning glassy bubble widget for Flutter with custom gradients, blur effects, and interactive scale animations.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/dyuta/glassy_bubble
 issue_tracker: https://github.com/dyuta/glassy_bubble/issues
 
